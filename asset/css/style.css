@@ -1,0 +1,69 @@
+body{
+    background-image: url(https://th.bing.com/th/id/OIP.KQA34y8heBOyqdsW4wFC4QHaDu?pid=ImgDet&rs=1);
+    width: 1200px;
+    height: 100%;    
+}
+h1{  grid-area: titre;
+     text-align: center;  
+}
+section{
+    display: grid;
+    grid-template-areas:"titre titre titre"
+                        "p      p      img"
+                        "ING    .       ."
+                       "footer footer footer";
+    gap: 15px;
+}
+.p{
+    grid-area: p;
+    height: 50%;
+    width: 100%;
+    font-style: italic;
+}
+.IMG{ 
+    grid-area: img;
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+h2{
+    color: brown;
+}
+.Ingrédient,.puce{
+    grid-area: auto;
+    list-style-type: square;
+}
+.prépa,.nume{
+    grid-area:ING;
+}
+.gras{
+    font-weight: bold;
+}
+.h3,div{
+    grid-area:ING;
+}
+footer{
+    grid-area: footer;
+    height: 30px;
+    background: black;
+    color: blanchedalmond;
+    text-align: center;
+}
+@media screen and(max-width:1024px){
+    body{
+        font-size: medium;
+        width: 600px;
+        height: 50%;  
+    }
+    .IMG{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width:767px){
+    body{
+        font-size: small;
+        width: 80px;
+        height: 15%;  
+    }   
+}
